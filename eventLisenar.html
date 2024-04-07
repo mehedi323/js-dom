@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 id="text-changer">Text Changer</h1>
+        <button id="click-handler">Update of Text</button>
+
+
+        <p id="input-text-display">Default Input Text</p>
+        <input id="input-field" type="text">
+        <button id="btn-update">Update</button>
+    </header>
+    <script>
+        document.getElementById('click-handler').addEventListener('click', function(){
+            const textChanger = document.getElementById('text-changer');
+            textChanger.innerText = 'asolei mama javascript onk sohoj jodi bujha jai'
+        });
+        document.getElementById('btn-update').addEventListener('click', function(){
+            const inputField = document.getElementById('input-field');
+            inputText = inputField.value;
+            
+            const inputTextDisplay = document.getElementById('input-text-display');
+            inputTextDisplay.innerText = inputText;
+            inputField.value = ''
+        })
+    </script>
+</body>
+</html>
