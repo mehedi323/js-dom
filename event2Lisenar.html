@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom addEventListener</title>
+</head>
+<body>
+    <h1 id="bike-colllection">Bike Collection</h1>
+    <button id="btn-bike">Show All Bike </button>
+
+    <h1 id="input-text-display">Input-Text</h1>
+    <input id="input-field" type="text">
+    <button id="btn-update">Update</button>
+
+
+    <script>
+        document.getElementById('btn-bike').addEventListener('click', function(){
+            const bikeCollection = document.getElementById('bike-colllection');
+            bikeCollection.innerText = 'Yeamaha R15'
+        })
+
+        document.getElementById('btn-update').addEventListener('click', function(){
+            const inputField = document.getElementById('input-field');
+            inputText= inputField.value;
+            const inputTextDisplay= document.getElementById('input-text-display')
+            inputTextDisplay.innerText = inputText;
+            inputField.value = ''
+        })
+
+    </script>
+</body>
+</html>
