@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Explore Event Delegete</h1>
+    <section>
+        <ul id="list-container">
+            <li class="list-items">Lorem ipsum dolor sit amet.</li> 
+            <li class="list-items">Lorem ipsum dolor sit amet.</li> 
+            <li class="list-items">Lorem ipsum dolor sit amet.</li> 
+            <li class="list-items">Lorem ipsum dolor sit amet.</li> 
+            <li class="list-items">Lorem ipsum dolor sit amet.</li> 
+            <li class="list-items">Lorem ipsum dolor sit amet.</li> 
+            <li class="list-items">Lorem ipsum dolor sit amet.</li> 
+        </ul>
+    </section>
+
+    <section>
+        <h1 class="items">amr sonar bangla </h1>
+        <h1 class="items">  ami tmay onk valobasi</h1>
+        <h1 class="items"> chiro din tmar akahs</h1>
+        <h1 class="items"> tmar batas</h1>
+        <h1 class="items"> oma fagune tor vora</h1>
+    </section>
+    <script>
+       const item = document.getElementsByClassName('list-items');
+       for(const items of item){
+         items.addEventListener('click', function(event){
+            event.target.parentNode.removeChild(event.target)
+         })
+       }
+       
+       const items = document.getElementsByClassName('items');
+       for(const item of items){
+        console.log(item);
+        item.addEventListener('click', function(event){
+            event.target.parentNode.removeChild(event.target)
+        })
+       }
+    </script>
+</body>
+</html>
